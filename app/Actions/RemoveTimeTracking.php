@@ -9,7 +9,7 @@ use App\Contracts\RemovesTimeTracking;
 
 class RemoveTimeTracking implements RemovesTimeTracking
 {
-    public function remove(User $user, Location $location, int $removeTimeTrackingForId, $timeTrackingId)
+    public function remove(User $user, Location $location, int $timeTrackingId)
     {
         tap($location->timeTrackings()->whereKey($timeTrackingId)->first(), function ($timeTracking) use ($user, $location) {
 

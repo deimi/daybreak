@@ -7,5 +7,5 @@ use App\Models\Location;
 
 interface RemovesTimeTracking
 {
-    public function remove(User $user, Location $location, int $removeTimeTrackingForId, $timeTrackingId);
+    public function remove(User $user, Location $location, int $timeTrackingId);
 }
