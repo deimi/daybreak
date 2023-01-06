@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="description">
-        {{ __('The Location\'s name and owner information.') }}
+        {{ __('The Location name and owner information.') }}
     </x-slot>
 
     <x-slot name="form">
