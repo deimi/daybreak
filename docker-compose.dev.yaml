@@ -1,0 +1,26 @@
+version: '3'
+services:
+
+  # App container
+  app:
+    build:
+      context: .
+      dockerfile: contrib/docker/Dockerfile.apache
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - app-storage:/var/www/storage
+      - app-bootstrap:/var/www/bootstrap
+      - "./daybreak_dev.sqlite:/var/www/daybreak_dev.sqlite"
+      - "./.env:/var/www/.env"
+      - "./app:/var/www/app"
+      - "./database:/var/www/database"
+      - "./resources:/var/www/resources"
+      - "./routes:/var/www/routes"
+    ports:
+      - "8080:80"
+
+volumes:
+  app-storage:
+  app-bootstrap:
