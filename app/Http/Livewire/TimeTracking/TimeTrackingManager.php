@@ -55,9 +55,9 @@ class TimeTrackingManager extends Component
     public $timeTrackingForm = [
         'description' => null,
         'date' => null,
-        'start_hour' => 9,
+        'start_hour' => 0,
         'start_minute' => 0,
-        'end_hour' => 17,
+        'end_hour' => 8,
         'end_minute' => 0,
     ];
 
