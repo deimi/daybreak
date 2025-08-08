@@ -100,7 +100,7 @@
             </div>
             <div class="col-span-6 sm:col-span-4 mt-2">
                 <div class="inline-flex">
-                    <input id="half_day" wire:model.defer="publicHolidayForm.half_day" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" disabled>
+                    <input id="half_day" wire:model.defer="publicHolidayForm.half_day" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" >
                     <x-jet-label for="half_day" class="ml-2 block text-sm text-gray-900" value="{{ __('Half day') }}" />
                 </div>
                 <x-jet-input-error for="half_day" class="ml-2 mt-2" />

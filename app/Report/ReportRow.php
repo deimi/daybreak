@@ -105,9 +105,11 @@ class ReportRow
         } else {
             if ($publicHoliday->public_holiday_half_day) {
                 $this->absentHours = $this->plannedHours()
-                    ->divideBy('2', 2, RoundingMode::HALF_EVEN);
+                    ->dividedBy(2, 2, RoundingMode::HALF_EVEN);
             }
-            $this->absentHours = $this->plannedHours();
+            else{
+                $this->absentHours = $this->plannedHours();
+            }
         }
     }
 
