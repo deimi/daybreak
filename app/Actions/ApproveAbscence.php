@@ -86,7 +86,7 @@ class ApproveAbscence implements ApprovesAbsence
 
         $absenceCalculator = new AbsenceCalculator($calendar, $absence->absenceType);
 
-        if ($absenceCalculator->sumPaidHours() != $absence->paid_hours) {
+        if ($absenceCalculator->sumPaidHours()->compareTo($absence->paid_hours) != 0) {
             throw ValidationException::withMessages([
                 'error' => [__("Paid hours changed from {$absence->paid_hours} to {$absenceCalculator->sumPaidHours()}")],
             ])->errorBag('approvesAbsence');
